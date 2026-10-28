@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHIRO | Portfolio</title>
+    
+    <!-- Embed Meta Tags for Discord & Social Media -->
+    <meta property="og:title" content="Mahiro | Portfolio">
+    <meta property="og:description" content="Check out my latest video editing work, long videos, shorts, and professional thumbnail designs!">
+    <meta property="og:image" content="https://mahiro251.github.io/my-portfolio/thumb1.jpg">
+    <meta property="og:url" content="https://mahiro251.github.io/my-portfolio/">
+    <meta name="theme-color" content="#5865F2">
+
+    <!-- Google Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">MAHIRO<span>.</span></div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#editing">Editing</a>
+            <a href="#thumbnails">Thumbnails</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <span class="badge">Content Creator & Editor</span>
+            <h1>Hi, I'm <span class="highlight">Mahiro</span></h1>
+            <p>I create cinematic video editing and eye-catching thumbnails that help boost viewership and engagement.</p>
+            <div class="hero-btns">
+                <a href="#editing" class="btn btn-primary"><i class="fa-solid fa-play"></i> Watch Works</a>
+                <a href="https://discord.gg/cAdf4tEDc" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-discord"></i> Discord Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editing Portfolio Section -->
+    <section class="section" id="editing">
+        <h2 class="section-title">Video <span class="highlight">Editing</span></h2>
+        <div class="grid gallery-grid">
+            
+            <!-- Long Video -->
+            <div class="card video-card" onclick="openVideo('https://www.youtube.com/embed/i_-nBJA0NOY')">
+                <div class="thumbnail-wrapper">
+                    <img src="https://img.youtube.com/vi/i_-nBJA0NOY/maxresdefault.jpg" alt="Long Video">
+                    <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Long Video Editing</h3>
+                    <p>Professional editing with visual effects and audio rhythm</p>
+                </div>
+            </div>
+
+            <!-- YouTube Shorts -->
+            <div class="card video-card shorts-card" onclick="openVideo('https://www.youtube.com/embed/SkvbgVhHi_c')">
+                <div class="thumbnail-wrapper shorts-wrapper">
+                    <img src="https://img.youtube.com/vi/SkvbgVhHi_c/maxresdefault.jpg" alt="YouTube Shorts">
+                    <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Fast-Paced Shorts</h3>
+                    <p>Dynamic pacing with engaging text and animations</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Thumbnails Section -->
+    <section class="section" id="thumbnails">
+        <h2 class="section-title">Thumbnail <span class="highlight">Gallery</span></h2>
+        <div class="grid gallery-grid">
+
+            <!-- Thumbnail 1 -->
+            <div class="card image-card" onclick="openImage('thumb1.jpg')">
+                <div class="thumbnail-wrapper">
+                    <img src="thumb1.jpg" alt="Thumbnail Design 1">
+                </div>
+                <div class="card-info">
+                    <h3>Cartoon Thumbnail Design</h3>
+                    <p>Custom illustration and design to attract viewers</p>
+                </div>
+            </div>
+
+            <!-- Thumbnail 2 -->
+            <div class="card image-card" onclick="openImage('thumb2.jpg')">
+                <div class="thumbnail-wrapper">
+                    <img src="thumb2.jpg" alt="Thumbnail Design 2">
+                </div>
+                <div class="card-info">
+                    <h3>Gaming / Vlog Thumbnail</h3>
+                    <p>Eye-catching lighting and colors to boost click-through rates</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Discord Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Get in <span class="highlight">Touch</span></h2>
+        <div class="discord-card">
+            <a href="https://discord.gg/cAdf4tEDc" target="_blank" class="discord-link">
+                <i class="fa-brands fa-discord discord-icon"></i>
+                <h3>Join our Discord community</h3>
+            </a>
+            <p>You can contact me directly for work inquiries or join our server</p>
+            <div class="discord-box">
+                <span id="discord-tag">mahiro251</span>
+                <button onclick="copyDiscord()"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+            <div class="social-links">
+                <a href="#" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" target="_blank" title="Twitch"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://github.com/Mahiro251" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popups -->
+    <div class="modal" id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">Discord tag copied successfully!</div>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+</body>
+</html>
